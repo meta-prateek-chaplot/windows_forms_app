@@ -21,5 +21,10 @@ namespace Windows_Forms_App___Data_Sync
         {
             this.Close();
         }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
