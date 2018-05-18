@@ -12,6 +12,7 @@ namespace Windows_Forms_App___Data_Sync
 {
     public partial class Form1 : Form
     {
+        static int index = 0;
         public Form1()
         {
             InitializeComponent();
@@ -25,6 +26,14 @@ namespace Windows_Forms_App___Data_Sync
         private void chart1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            double textValue = Convert.ToDouble(textBox1.Text);
+            this.chart1.Series["Avg Temp"].Points.AddXY(++index, textValue);
+
+            index %= 7;
         }
     }
 }
